@@ -1,4 +1,4 @@
-![](grafana-unbound-dashboard.png)
+![](grafana-dashboard-libvirt.png)
 
 # Libvirt Prometheus Exporter
 
