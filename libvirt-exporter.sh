@@ -106,9 +106,10 @@ get_domain_stats() {
         # Skip header lines
         [[ "$line" =~ ^[[:space:]]*Id || "$line" =~ ^[[:space:]]*-- ]] && continue
         
-        if [[ "$line" =~ ^[[:space:]]*-?[[:space:]]*([^[:space:]]+)[[:space:]]+(.+)$ ]]; then
-            local domain_name="${BASH_REMATCH[1]}"
-            local state="${BASH_REMATCH[2]}"
+        if [[ "$line" =~ ^[[:space:]]*([0-9-]+)[[:space:]]+([^[:space:]]+)[[:space:]]+(.+)$ ]]; then
+            local domain_id="${BASH_REMATCH[1]}"
+            local domain_name="${BASH_REMATCH[2]}"
+            local state="${BASH_REMATCH[3]}"
             
             case "$state" in
                 "running")
