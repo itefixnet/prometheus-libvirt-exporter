@@ -1,3 +1,5 @@
+![](grafana-unbound-dashboard.png)
+
 # Libvirt Prometheus Exporter
 
 A lightweight, bash-based Prometheus exporter for libvirt hypervisor statistics. This exporter uses only bash, virsh, and socat to provide comprehensive virtualization metrics for monitoring with Prometheus and Grafana.
