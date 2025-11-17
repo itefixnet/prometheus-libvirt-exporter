@@ -1,0 +1,16 @@
+[Unit]
+Description=Libvirt Prometheus Exporter
+After=libvirtd.service
+Wants=network.target
+
+[Service]
+Type=exec
+User=libvirt-exporter
+Group=libvirt
+EnvironmentFile=-/opt/libvirt-exporter/libvirt-exporter.conf
+ExecStart=/opt/libvirt-exporter/http-server.sh start
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
