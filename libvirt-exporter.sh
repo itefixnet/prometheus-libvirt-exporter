@@ -228,7 +228,7 @@ get_running_domain_metrics() {
             
             if [[ -n "$block_stats" ]]; then
                 while IFS= read -r line; do
-                    if [[ "$line" =~ ^([^[:space:]]+)[[:space:]]+([0-9]+)$ ]]; then
+                    if [[ "$line" =~ ^[^[:space:]]+[[:space:]]+([^[:space:]]+)[[:space:]]+([0-9]+)$ ]]; then
                         local stat_name="${BASH_REMATCH[1]}"
                         local stat_value="${BASH_REMATCH[2]}"
                         
@@ -263,7 +263,7 @@ get_running_domain_metrics() {
             
             if [[ -n "$net_stats" ]]; then
                 while IFS= read -r line; do
-                    if [[ "$line" =~ ^([^[:space:]]+)[[:space:]]+([0-9]+)$ ]]; then
+                    if [[ "$line" =~ ^[^[:space:]]+[[:space:]]+([^[:space:]]+)[[:space:]]+([0-9]+)$ ]]; then
                         local stat_name="${BASH_REMATCH[1]}"
                         local stat_value="${BASH_REMATCH[2]}"
                         
