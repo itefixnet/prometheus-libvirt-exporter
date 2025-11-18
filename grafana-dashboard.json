@@ -113,7 +113,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 3,
+        "w": 6,
         "x": 6,
         "y": 0
       },
@@ -176,8 +176,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 3,
-        "x": 9,
+        "w": 6,
+        "x": 12,
         "y": 0
       },
       "id": 3,
@@ -239,8 +239,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 3,
-        "x": 12,
+        "w": 6,
+        "x": 18,
         "y": 0
       },
       "id": 4,
@@ -271,67 +271,6 @@
       ],
       "title": "Host Memory",
       "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "${datasource}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "hideFrom": {
-              "tooltip": false,
-              "vis": false,
-              "legend": false
-            }
-          },
-          "mappings": []
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 9,
-        "x": 15,
-        "y": 0
-      },
-      "id": 5,
-      "options": {
-        "displayLabels": [
-          "name"
-        ],
-        "legend": {
-          "displayMode": "table",
-          "placement": "right"
-        },
-        "pieType": "pie",
-        "reduceOptions": {
-          "values": false,
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": ""
-        },
-        "tooltip": {
-          "mode": "single"
-        }
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${datasource}"
-          },
-          "expr": "sum by(state) (libvirt_pools_total{job=~\"$job\",instance=~\"$instance\"})",
-          "refId": "A"
-        }
-      ],
-      "title": "Storage Pool States",
-      "type": "piechart"
     },
     {
       "datasource": {
