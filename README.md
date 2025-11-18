@@ -1,4 +1,4 @@
-![](grafana-dashboard-libvirt.png)
+
 
 # Libvirt Prometheus Exporter
 
